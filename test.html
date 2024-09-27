@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+  <div id="chat_space">
+    <div id="top_part">
+      <div><img src="pic2.jpeg"  id="img"></div>
+      
+      <div id="name_part"><h3>Anaswara</h3></div>
+    </div>
+    
+  <div id="bottom_part">
+  <input type="text" id ="text_field" placeholder="Message">
+  <input type="button" onclick="Send_function()" value="Send" id="btn">
+
+  </div>
+  
+  <script>
+     
+    function Send_function(){
+      var message = document.getElementById("text_field");
+      var paragraph= document.createElement("p");
+      paragraph.innerHTML=message.value
+      message.value=" "
+      var chatSpace = document.getElementById("chat_space");
+      var bottomPart = document.getElementById("bottom_part");
+      
+      chatSpace.insertBefore(paragraph, bottomPart);
+      var msg_tune = new Audio("music.mp3"); 
+      msg_tune.play();
+      
+    }
+
+  </script>
+
+
+  </div>
+  
+</body>
+
+</html>
